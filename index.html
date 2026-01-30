@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TaskCal</title>
 
+
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+<h1>TaskCal</h1>
+<button id="addBtn">+</button>
+</header>
+
+
+<section class="stats">
+<div><span id="stat-active">0</span><small>Active</small></div>
+<div><span id="stat-done">0</span><small>Done</small></div>
+<div><span id="stat-streak">0</span><small>Streak</small></div>
+<div><span id="stat-overdue">0</span><small>Overdue</small></div>
+</section>
+
+<section class="panel open" id="calendarPanel">
+<h2>Calendar</h2>
+<div class="views">
+<button data-view="year">Year</button>
+<button data-view="month" class="active">Month</button>
+<button data-view="week">Week</button>
+<button data-view="day">Day</button>
+</div>
+<div id="calendar"></div>
+</section>
+
+<section class="panel" id="taskPanel">
+<h2>Tasks</h2>
+<div id="taskList"></div>
+</section>
+
+
+<div id="modal" class="hidden"></div>
+
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
